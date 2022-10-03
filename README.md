@@ -1,4 +1,4 @@
-# HacktoberFest22
-### Be part of the amazing event Hacktober and win free shirt🎉🎉
+# Hacktoberfest 2022 Pull Request - `FREE T-SHIRT`🎉
+Code any algorithm of your choice in JAVA/C/C++.
 
-## Add your website templete in a folder with your name.
+This is so you can learn and get started with Open-source. Easy, Simple and Intuitive Repo for all Coders out there 🤩!!
