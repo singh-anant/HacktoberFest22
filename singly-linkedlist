@@ -1,0 +1,86 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int info;
+    struct node *link;
+};
+struct node* start=NULL;
+
+struct node* createnode()
+{
+    struct node* temp;
+    temp=(struct node*)malloc(sizeof(struct node));
+    return(temp);
+}
+
+void insertend()
+{
+    struct node* tmp,*t;
+    tmp=createnode();
+    printf("Enter the node\n");
+    scanf("%d",&tmp->info);
+    if(start==NULL)
+        start=tmp;
+    else
+        t=start;
+    while(t->link!=NULL)
+        t=t->link;
+    t->link=tmp;
+}
+
+void deletefirst()
+{
+    struct node* r;
+    if(start==NULL)
+        printf("List is empty");
+    else
+        r=start;
+    start=start->link;
+    free(r);
+}
+
+void display()
+{
+    struct node* t;
+    if(start==NULL)
+    {
+        printf("List is empty");
+    }
+    else
+    {
+      t=start;
+    while(t!=NULL)
+    {
+        printf("%d",t->info);
+        t=t->link;
+    }
+  }
+}
+
+int main()
+{
+   int n;
+   printf("Choose \n 1.INSERT \n 2.DELETE \n 3.DISPLAY \n 4.EXIT \n");
+   scanf("%d",&n);
+   while(1)
+   {
+       switch(n)
+       {
+           case 1:insertend();
+                  break;
+           case 2:deletefirst();
+                  break;
+           case 3:display();
+                  break;
+           case 4:exit(0);
+                  break;
+           default:printf("Choose correct option\n");
+                   break;
+       }
+       getch();
+   }
+   return 0;
+}
